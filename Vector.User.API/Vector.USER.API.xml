@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vector.User.API</name>
+    </assembly>
+    <members>
+        <member name="M:Vector.User.API.Controllers.CustomerManagementController.getAllCustomer">
+            <summary>
+            We can get all the active customer form GetAllCustomer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.CustomerManagementController.getCustomer(System.Int32)">
+            <summary>
+            We can fetch each customer by its ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.CustomerManagementController.getActiveCustomer">
+            <summary>
+            We Get All The Active Customer who All have IsDeleted Status As False
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.CustomerManagementController.AddCustomerInformation(Vector.User.API.Models.CustomerManagementRequest.CustomerManagementRequest)">
+            <summary>
+            Add New Customer
+            </summary>
+            <param name="customerManagementRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.CustomerManagementController.editCustomer(Vector.User.Domain.Models.CustomerManagementModel)">
+            <summary>
+            Customer can update his/her data with UpdateCustomer
+            </summary>
+            <param name="userModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.CustomerManagementController.deleteCustomer(System.Int32)">
+            <summary>
+            We can delete customer with help of DeleteCustomer
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.CustomerManagementController.softDeletedCustomer(System.Int32)">
+            <summary>
+            We can set any Customer as INACTIVE with softdelete
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.UserController.Register(Vector.User.API.Models.UserRequest)">
+            <summary>
+            User Can Register for them using his/her Information
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.UserController.Authenticate(Vector.User.API.Models.AuthenticateRequest)">
+            <summary>
+            Here only registered user can login there account with Email and Password
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.UserController.GetUserEmail(Vector.User.API.Models.UserEmailModel)">
+            <summary>
+            Send OTP on the registered Email only
+            </summary>
+            <param name="userEmailModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.UserController.OtpVerify(Vector.User.API.Models.OtpModel)">
+            <summary>
+            Verify the OTP which is on the Email 
+            </summary>
+            <param name="otpModel"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:Vector.User.API.Controllers.UserController.forgetPassword(Vector.User.API.Models.ForgetPasswordRequest)">
+            <summary>
+            If user does not recognize the Password then here they can change the Password on registered Email
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vector.User.API.Controllers.UserController.resetPassword(Vector.User.API.Models.ResetPasswordRequest)">
+            <summary>
+            If user wants to change the Password then here they can change the Password on the registered Email
+            </summary>
+            <param name="Model"></param>
+            <returns></returns>
+            
+        </member>
+    </members>
+</doc>

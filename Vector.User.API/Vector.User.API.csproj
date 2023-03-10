@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>Vector.User.API.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;CS8625;CS1591;CS8618;CS1717;CS8602;CS8603;CS8600;CS0168;CS8601</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;CS8625;CS1591;CS8618;CS1717;CS8602;CS8603;CS8600;CS0168;CS8601</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="MailKit" Version="3.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vector.User.Domain\Vector.User.Domain.csproj" />
+    <ProjectReference Include="..\Vector.User.Infrastructure\Vector.User.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Vector.CRUDLibrary">
+      <HintPath>..\..\Vector.CRUDLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Vector.ExceptionHandlingLibrary">
+      <HintPath>..\..\Vector.ExceptionHandlingLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
